@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Yadira Garcia",
+      "email": "yadira@gmail.com",
+      "password": "123456",
+      "position": "waiter"
+    },
+
+    {
+      "id": 2,
+      "name": "Olga Acosta",
+      "email": "olga@gmail.com",
+      "password": "123456",
+      "position": "waiter"
+    }
+  ]
+}

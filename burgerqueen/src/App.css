@@ -10,13 +10,8 @@
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
     margin: 0;
 }
-
-/* .section {
-  background-image: url('./imagens/fondoamarillo.jpg');
-} */
 
 .login {
     width: 100%;
@@ -27,21 +22,31 @@ body {
     place-items: center;
 }
 
-.titlelogin {
-  font-size: 32px;
-  font-weight: bold;
-  text-align: center;
-}
-
 .form-container {
     display: grid;
     grid-template-rows: auto 1fr auto; /*con auto toma el tamaño que desea*/
     width: 300px;
+    position: relative;
+}
+
+.login-titles {
+  font-family: Moo Lah Lah;
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: absolute;
+  top: -80px;
+  left: -60px;
+  color: #770101c5;
+}
+
+.login-title-second {
+  margin-left: 40px;
 }
 
 .baristaLogo {
     width: 60%;
-    /* margin-bottom: 20px; */
+    margin-bottom: 15px;
     justify-self: center;
 }
 
@@ -52,21 +57,19 @@ body {
 }
 
 .input {
-    /* background-color: var(--text-input-field);
-    border: none; */
     border-radius: 5px;
     height: 30px;
     font-size: var(--md);
     padding: 6px;
     margin-bottom: 12px;
     background-color: #FFF5E4;
-    border: 1px solid #000000;
+    border: 1px solid #00000059;
 }
 
 .input-email {
     margin-bottom: 22px;
     background-color: #FFF5E4;
-    border: 1px solid #000000;
+    border: 1px solid #00000059;
 }
 
 .form {

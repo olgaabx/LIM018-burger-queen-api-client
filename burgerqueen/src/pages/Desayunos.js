@@ -1,6 +1,11 @@
+import OrderSummary from "../components/OrderSummary"
+import HeaderBQ from "../components/HeaderBQ"
 
 export default function Desayunos() {
   return (
-    <div>desayunos</div>
+    <>
+    <HeaderBQ/>
+    <OrderSummary/>
+    </>    
   )
 }

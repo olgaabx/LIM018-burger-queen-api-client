@@ -2,3 +2,12 @@
     width: 2%;
     justify-self: center;
 }
+.imgError{
+    width: 50%;
+}
+.textError{
+    font-size: 40px;
+    font-weight: bolder;
+    color: rgb(56, 5, 84);
+  
+}

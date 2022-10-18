@@ -7,6 +7,7 @@ import NotFoundPage from './components/NotFoundPage';
 import NavBar from './components/NavBar';
 import PerfilesUsuarios from './pages/PerfilesUsuarios';
 
+
 function App() {
   return (
     <BrowserRouter>

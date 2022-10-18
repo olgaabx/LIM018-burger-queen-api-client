@@ -8,8 +8,10 @@
     width: 12%;
     height: 500px;
     margin-left: 0.3%;
-   
+    margin-top: 30px;
+    align-items: center;
 }
+
 .iconMenu{
     display: flex;
    justify-content: center;
@@ -18,8 +20,9 @@
     padding-top: 3%;
     border-radius: 30px;
     background-color: #FFEE63;
-    border: none;   
+    border: none;
 }
+
 .iconMenu:hover{
     background-color: rgb(55, 49, 229);
 }

@@ -8,15 +8,12 @@ export const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const BASE_URL = "http://localhost:3000";
-  // const authPath = "/auth";
 
   const loginSubmit = (event) => {
     event.preventDefault();
     console.log(event.target.value)
 
-    // setPassword(event.target.value);
-    if (email === "") {
+    if (email === "" || password === "") {
       alert("Por favor, ingresa tus datos");
     } else {
       auth(email, password)
@@ -32,6 +29,7 @@ export const Login = () => {
         .catch((err) => {
           // console.log("=>", err);
           console.log("error del catch");
+          alert("Los datos ingresados son incorrectos")
         });
     }
   };
@@ -40,13 +38,16 @@ export const Login = () => {
     <>
       <div className='login'>
         <div className='form-container'>
-          <h1>Burger Queen</h1>
+          <div className='login-titles'>
+            <p className='login-title-first'>Burger</p>
+            <p className='login-title-second'>Queen</p>
+          </div>
           <img src={barista} alt='chica barista' className='baristaLogo' />
-          <p className='titlelogin'>Iniciar sesión</p>
+          {/* <p className='titlelogin'>Iniciar sesión</p> */}
           <form action='/' className='form'>
-            {/* <label htmlFor='email' className='label' required>
+            <label htmlFor='email' className='label' required>
               Correo electrónico
-            </label> */}
+            </label>
             <input
               type='text'
               id='email'

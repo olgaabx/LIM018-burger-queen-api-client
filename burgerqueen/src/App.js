@@ -6,9 +6,19 @@ import Especiales from './pages/Especiales';
 import NotFoundPage from './components/NotFoundPage';
 import NavBar from './components/NavBar';
 import PerfilesUsuarios from './pages/PerfilesUsuarios';
-
+// import Swal from 'sweetalert2';
+// import { useEffect } from 'react';
 
 function App() {
+
+  // useEffect(() => {
+  //   showAlert();
+  // }, [])
+
+  // const showAlert = () => {
+  //   Swal.fire("Mensaje de error")
+  // }
+
   return (
     <BrowserRouter>
 

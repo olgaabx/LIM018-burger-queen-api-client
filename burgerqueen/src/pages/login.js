@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import { auth } from "../helpers/api";
 import { useNavigate } from 'react-router-dom';
-import barista from "../imagens/barista.png";
+import burgerlogo from "../imagens/burgerqueen-logo.png"
+import barista from "../imagens/barista.png"
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -20,6 +21,9 @@ export const Login = () => {
         .then((res) => {
           // console.log("soy el console", res);
           if (res.status === 200) {
+            localStorage.setItem('key', res.data.token)
+            // eslint-disable-next-line no-unused-vars
+            const token = localStorage.getItem('key')
             navigate("/desayunos");
           }
           else if (res.status === 400) {
@@ -60,7 +64,7 @@ export const Login = () => {
               Constraseña
             </label>
             <input
-              type='text'
+              type='password'
               id='new-password'
               placeholder='***********'
               className='input input-password'

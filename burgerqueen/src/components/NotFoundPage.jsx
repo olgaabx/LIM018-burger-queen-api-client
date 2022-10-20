@@ -1,5 +1,5 @@
 import ups from "../imagens/ups.png";
-import '../NotFoundPage.css'
+import '../styles/NotFoundPage.css'
 
 
 export default function NotFoundPage() {

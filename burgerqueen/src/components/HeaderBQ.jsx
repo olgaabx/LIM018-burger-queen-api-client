@@ -1,9 +1,20 @@
 import barista from "../imagens/barista.png";
 import apagar from "../imagens/apagar.png";
 import perfil from "../imagens/perfil.png";
-import '../HeaderBQ.css'
+import '../styles/HeaderBQ.css'
+import { useNavigate } from "react-router-dom";
 
 export default function HeaderBQ() {
+  const navigate = useNavigate();
+
+  const logOut = () =>{
+    navigate('/')
+  }
+
+  const profileUser = () =>{
+    navigate('/perfil')
+  }
+
   return (
     <nav>
       <div className='navbar-left'>
@@ -19,8 +30,8 @@ export default function HeaderBQ() {
         </p>
       </div>
       <div className='navbar-right'>
-        <img src={perfil} alt='profile icon' className='profileIcon' />
-        <img src={apagar} alt='log out icon' />
+        <img onClick={profileUser} src={perfil} alt='profile icon' className='profileIcon' />
+        <img onClick={logOut} src={apagar} alt='log out icon' />
       </div>
     </nav>
   );

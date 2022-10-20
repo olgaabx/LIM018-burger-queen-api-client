@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import { auth } from "../helpers/api";
 import { useNavigate } from 'react-router-dom';
-import burgerlogo from "../imagens/burgerqueen-logo.png"
-import barista from "../imagens/barista.png"
+import burgerlogo from "../imagens/Burgerqueen.png"
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -42,11 +41,8 @@ export const Login = () => {
     <>
       <div className='login'>
         <div className='form-container'>
-          <div className='login-titles'>
-            <p className='login-title-first'>Burger</p>
-            <p className='login-title-second'>Queen</p>
-          </div>
-          <img src={barista} alt='chica barista' className='baristaLogo' />
+          
+          <img src={burgerlogo} alt='chica barista' className='baristaLogo' />
           {/* <p className='titlelogin'>Iniciar sesión</p> */}
           <form action='/' className='form'>
             <label htmlFor='email' className='label' required>
@@ -55,7 +51,7 @@ export const Login = () => {
             <input
               type='text'
               id='email'
-              placeholder='juan@gmail.com'
+              placeholder='usuario@gmail.com'
               className='input input-email'
               onChange={(e) => setEmail(e.target.value)}
               // required

@@ -1,4 +1,4 @@
-import '../orderSummary.css';
+import '../styles/orderSummary.css';
 
 export default function OrderSummary() {
   return (

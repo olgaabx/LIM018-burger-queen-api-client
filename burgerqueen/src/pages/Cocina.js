@@ -1,13 +1,12 @@
-import OrderSummary from "../components/OrderSummary"
 import HeaderBQ from "../components/HeaderBQ"
 import OptionMenu from '../components/OptionMenu';
 
-export default function Especiales() {
+export default function Cocina() {
   return (
     <>
     <HeaderBQ/>
     <OptionMenu/>
-    <OrderSummary/>
+    
     </> 
   )
 }

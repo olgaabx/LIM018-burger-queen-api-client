@@ -40,7 +40,7 @@ export const Login = () => {
   return (
     <>
       <div className='login'>
-        <div className='form-container'>
+          <div className='form-container'>
           
           <img src={burgerlogo} alt='chica barista' className='baristaLogo' />
           {/* <p className='titlelogin'>Iniciar sesión</p> */}

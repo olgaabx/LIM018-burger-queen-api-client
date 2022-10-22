@@ -21,10 +21,19 @@ export default function OptionMenu() {
 
 
   return (
-    <div className="options">
-      <button  onClick={toDesayunos} className="iconMenu"> <img src={cafedesayuno} alt='icondesayuno' className="imgMenu"/></button>
-      <button onClick={toEspeciales} className="iconMenu"><img src={comidaChatarra} alt='iconEspeciales'/></button>
-      <button onClick={toCocina} className="iconMenu"><img src={cocina} alt='iconCocina'/></button>
+    <div className='options-container'>
+      <div className='options'>
+        <button onClick={toDesayunos} className='iconMenu'>
+          {" "}
+          <img src={cafedesayuno} alt='icondesayuno' className='imgMenu' />
+        </button>
+        <button onClick={toEspeciales} className='iconMenu'>
+          <img src={comidaChatarra} alt='iconEspeciales' />
+        </button>
+        <button onClick={toCocina} className='iconMenu'>
+          <img src={cocina} alt='iconCocina' />
+        </button>
+      </div>
     </div>
-  )
+  );
 }

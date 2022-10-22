@@ -41,7 +41,6 @@ export const Login = () => {
     <>
       <div className='login'>
           <div className='form-container'>
-          
           <img src={burgerlogo} alt='chica barista' className='baristaLogo' />
           {/* <p className='titlelogin'>Iniciar sesión</p> */}
           <form action='/' className='form'>
@@ -67,12 +66,12 @@ export const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
               // required
             />
-            <input
-              type='submit'
-              defaultValue='Ingresar'
+            <button
               className='primary-button login-button'
               onClick={loginSubmit}
-            />
+            >
+              Ingresar
+            </button>
           </form>
         </div>
       </div>

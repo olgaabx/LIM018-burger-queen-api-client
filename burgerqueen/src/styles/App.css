@@ -1,16 +1,10 @@
-:root {
-    --white: #FFFFFF;
-    --black: #000000;
-    --very-light-pink: #C7C7C7;
-    --text-input-field: #F7F7F7;
-    --hospital-green: #ACD982;
-    --sm: 14px;
-    --md: 16px;
-    --lg: 18px;
-}
+/* :root {
+} */
 
-body {
-    margin: 0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .login {
@@ -20,7 +14,7 @@ body {
     /* Para centrar el contenido vertical y horizontalmente*/
     display: grid;
     place-items: center;
-    opacity: 0.9;
+    /* opacity: 0.9; */
 }
 
 .form-container {
@@ -28,7 +22,7 @@ body {
     grid-template-rows: auto 1fr auto; /*con auto toma el tamaño que desea*/
     width: 300px;
     position: relative;
-    
+
 }
 
 .login-titles {
@@ -52,7 +46,7 @@ body {
     justify-self: center;
     filter: brightness(1.5);
     mix-blend-mode: multiply;
-    
+
 
 }
 

@@ -1,15 +1,18 @@
-import React from 'react'
+import ButtonSend from './ButtonSend'
 import '../styles/showProducts.css'
 
-export default function ShowProducts() {
+export default function ShowProducts(props) {
   return (
-    <div className="menu-container">
-      <div className="food-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/5787/5787016.png" alt="" />
-        <p className="name-product">Hamburguesa simple</p>
-        <p className="price-product">Costo: </p>
-        <button className="add-product-button">Añadir</button>
-      </div>
-    </div>
+
+    <div key={props.key} className="food-card">
+        <img src={props.image} alt={props.name} className="img-products"/>
+        <p className="name-product">{props.name}</p>
+        <p className="price-product">Costo:{props.price}</p>
+       <ButtonSend key={props._id}>Enviar</ButtonSend>
+       <ButtonSend key={props._id} >Quita</ButtonSend>
+     
+   </div>
+     
+   
   )
 }

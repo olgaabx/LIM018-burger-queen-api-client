@@ -19,6 +19,7 @@ export default function HeaderBQ() {
     <nav>
       <div className='navbar-left'>
         <img src={barista} alt='logo' className='coffeGirl' />
+      
         <div className='nav-titles'>
           <p className='nav-title-first'>Burger</p>
           <p className='nav-title-second'>Queen</p>

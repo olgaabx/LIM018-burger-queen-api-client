@@ -6,19 +6,21 @@ export default function OrderSummary() {
       <form action="" className='formOrder'>
        <section className='orderContainer'>
           <table>
-            <tr>
-            <th className='titleOrder'>Cantidad</th>
-              <th className='titleOrder'>Productos</th>
-              <th className='titleOrder'>Total</th>
-              <th className='titleOrder'></th>
-            </tr>
-    
-            <tr>
-                <td id= 'quantity'>a</td>
-                <td id= 'products'>b</td>
-                <td id= 'total'>c</td>
-                <td id= 'editDelete'>d</td>
-            </tr>
+            <tbody>
+              <tr>
+              <th className='titleOrder'>Cantidad</th>
+                <th className='titleOrder'>Productos</th>
+                <th className='titleOrder'>Total</th>
+                <th className='titleOrder'></th>
+              </tr>
+      
+              <tr>
+                  <td id= 'quantity'>a</td>
+                  <td id= 'products'>b</td>
+                  <td id= 'total'>c</td>
+                  <td id= 'editDelete'>d</td>
+              </tr>
+            </tbody>
           </table>
        </section>
        <section className='DataClientContainer'>

@@ -9,14 +9,14 @@ export default function OptionMenu() {
     const navigate = useNavigate();
 
     const toDesayunos = () =>{
-      navigate("/desayunos");
+      navigate("/menu");
     }
     const toEspeciales = () =>{
-      navigate("/especiales");
+      navigate("/menu");
     }
 
     const toCocina = () =>{
-      navigate("/cocina");
+      navigate("/chef");
     }
 
 

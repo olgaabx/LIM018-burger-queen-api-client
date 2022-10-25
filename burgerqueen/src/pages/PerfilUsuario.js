@@ -17,9 +17,8 @@ export default function PerfilUsuario() {
     
 
       Colaborador <h1>{id}</h1>
-     </div>
+      </div>
     <button onClick = {toReturn}>Salir</button>
-   
     </>
 
   )

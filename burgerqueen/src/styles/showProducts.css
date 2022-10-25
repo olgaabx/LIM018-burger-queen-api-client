@@ -32,3 +32,15 @@
   color: #FFF;
   font-weight: bold;
 }
+.show-products-menu{
+  display: flex;
+  
+}
+
+.container-products{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: space-between;
+  margin: 1%;
+
+}

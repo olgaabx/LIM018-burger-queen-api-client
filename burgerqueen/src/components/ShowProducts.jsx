@@ -7,7 +7,7 @@ export default function ShowProducts(props) {
       <img src={props.image} alt={props.name} className="img-products"/>
       <p className="name-product">{props.name}</p>
       <p className="price-product">Costo:{props.price}</p>
-      <ButtonSend title="enviar"/>
+      <ButtonSend    title="enviar"/>
       <ButtonSend title="quitar"/>
     </div>
   )

@@ -1,8 +1,8 @@
 import '../styles/orderSummary.css';
 
-export default function OrderSummary(props) {
+export default function OrderSummary({order}) {
 
- //console.log(props)
+ //console.log(order)
   return (
     <>
       <form action="" className='formOrder'>
@@ -17,16 +17,21 @@ export default function OrderSummary(props) {
               </tr>
             </thead>
             <tbody>
-                {props.productsChosen.map((prod, index) => {
+                {order.map((prod) => {
+                  const qty = [order.product].length
+                 
+                  console.log(prod)
+                  console.log(prod.product._id)
+                  
 
                   return (
                     
                     <tr>
-                      <td id= 'quantity'>{prod.addMenu}</td>
-                      <td id= 'products'>{prod.name}</td>
-                      <td id= 'total'></td>
+                      <td id= 'quantity'>{qty}</td>
+                      <td id= 'products'>{prod.product.name}</td>
+                      <td id= 'total'>{(prod.product.price)*qty}</td>
                       <td id= 'editDelete'><button onClick={()=>(prod.removeMenu)}>x</button></td>
-                      <td  key ={index}></td>
+                      <td key ={prod.product._id}></td>
                     </tr>   
                 )})}
  

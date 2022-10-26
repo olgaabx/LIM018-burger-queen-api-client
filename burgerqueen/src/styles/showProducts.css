@@ -44,3 +44,13 @@
   margin: 1%;
 
 }
+.btnSend{
+  background: #FF5B00;
+  border: none;
+  border-radius: 10px; 
+  font-family: 'Lemon';
+  font-size: 19px;
+  text-align: center;
+  color: #FFFFFF; 
+  height:5%;     
+}

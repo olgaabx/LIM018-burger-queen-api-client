@@ -1,9 +1,8 @@
-import { useState } from "react"
 
 export default function ButtonSend(props) {
  
   return (
-   <button className="buttonSend"  id={props.id} onClick = {props.whenClick}>
+   <button   id={props.id} onClick = {props.onClick}>
     {props.title}
    </button>
   )

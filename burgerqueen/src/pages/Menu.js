@@ -7,7 +7,9 @@ import { useState, useEffect } from "react";
 import "../styles/showProducts.css";
 
 export default function Desayunos() {
+
   const [products, setProducts] = useState([]);
+  const [order, setOrder] = useState([]);
 
   const token = localStorage.getItem("key");
 
@@ -22,15 +24,20 @@ export default function Desayunos() {
 
  
   //----------- agregar y remover productos del contador
-  const [counterProduct, setCounterProduct] = useState(0)
+  
 
-  const addMenu = ()=>{
-    setCounterProduct(counterProduct+1)
+  const addMenu = (product)=>{
+    // setOrder([...order].push(product)) asi no se debe hacer
+    //setOrder((order) =>  [...order].push({product})) este no funciono
+    setOrder((order) =>  [...order, {product}])
+    
   }
  
    const removeMenu = ()=>{
-    setCounterProduct(counterProduct-1)
+    
    }
+
+ // useEffect(() => console.log(order), [order])
 
   return (
     <>
@@ -42,19 +49,16 @@ export default function Desayunos() {
               
               return (
                 <CardProducts
+                  product={prod}
                   key={index}
-                  id={prod._id}
-                  image={prod.image}
-                  name={prod.name}
-                  price={`S/. ${prod.price}`}
-                  addMenu={addMenu}
+                  onAddMenu={() => addMenu(prod)}
                   removeMenu={removeMenu}
                 />
               );
             })}
           </div>
       </div>
-           <OrderSummary  productsChosen={[]}/>
+           <OrderSummary order={order}/>
     </>
   );
 }

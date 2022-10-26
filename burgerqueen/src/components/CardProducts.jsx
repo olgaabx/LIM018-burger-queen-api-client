@@ -1,15 +1,16 @@
 import ButtonSend from './ButtonSend'
 import '../styles/showProducts.css'
 
-export default function CardProducts(props) {
+export default function CardProducts({product: {image, name, price, _id}, onAddMenu}) {
 
   return (
     <div className="food-card">
-      <img src={props.image} alt={props.name} className="img-products"/>
-      <p className="name-product">{props.name}</p>
-      <p className="price-product">Costo:{props.price}</p>
-      <ButtonSend id={props.id} add={props.addMenu} title="añadir"  whenClick={props.addMenu}/>
+      <img src={image} alt={image} className="img-products"/>
+      <p className="name-product">{name}</p>
+      <p className="price-product">Costo:{`S/. ${price}`}</p>
+      <ButtonSend id={_id}  title="añadir"  onClick={onAddMenu}/>
      
     </div>
   )
 }
+

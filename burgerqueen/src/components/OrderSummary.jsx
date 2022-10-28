@@ -2,7 +2,7 @@ import '../styles/orderSummary.css';
 
 export default function OrderSummary({order}) {
 
- //console.log(order)
+ console.log(order)
   return (
     <>
       <form action="" className='formOrder'>
@@ -19,16 +19,15 @@ export default function OrderSummary({order}) {
             <tbody>
                
                 {order.map((prod,i) => {
-                  //const qty = [order.product].length
-                 
-                  console.log(prod)
+                                   
+                  // console.log(prod)
                   
                   return (
                     
                     <tr key ={i}>
                       <td id= 'quantity'>{prod.qty}</td>
-                      <td id= 'products'>{prod.product.name}</td>
-                      <td id= 'total'>{(prod.product.price)}</td>
+                      <td id= 'products'>{prod.name}</td>
+                      <td id= 'total'>{(prod.price)*(prod.qty)}</td>
                       <td id= 'editDelete'><button onClick={prod.onremoveMenu}>x</button></td>
                       
                     </tr>   

@@ -31,26 +31,28 @@ export default function Desayunos() {
     setOrder((oldOrder) => {
      
       // 1. identificar si el producto ya esta en la orden
-      let orderProduct
+      
 
-      const found = oldOrder.find(element => element._id === product._id);
+      let orderProduct = oldOrder.find(element => element._id === product._id);
+      //console.log(product)
+      console.log(oldOrder)
   
-      if(found){
+      if(orderProduct){
         // si el producto ya esta 
         // 1. guardo una referencia al producto encontrado en orderProduct
-        orderProduct = found
+       
         // 2. elimina el producto encontrado del oldOrder
         // 3. le sumo uno a su attr qty
         orderProduct.qty += 1
       } else {
         // si no esta
         // uso el producto que viene por paramatro y lo guardo en orderProduct
-        orderProduct = product
+        //orderProduct = product
         // le agrego un attr qty = 1
-        orderProduct.qty = 1
+        product.qty = 1
       }
       // agrego orderProduct junto con oldOrder a lnuevio  estado final
-      return [...oldOrder, orderProduct]
+      return [...oldOrder, product]
     })
     
   }

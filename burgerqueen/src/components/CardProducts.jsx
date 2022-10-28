@@ -1,7 +1,7 @@
 import ButtonSend from './ButtonSend'
 import '../styles/showProducts.css'
 
-export default function CardProducts({product: {image, name, price, _id}, onAddMenu}) {
+export default function CardProducts({product: {image, name, price, _id}, onAddMenu, onremoveMenu}) {
 
   return (
     <div className="food-card">

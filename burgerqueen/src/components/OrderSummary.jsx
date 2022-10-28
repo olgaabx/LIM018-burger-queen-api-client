@@ -17,23 +17,22 @@ export default function OrderSummary({order}) {
               </tr>
             </thead>
             <tbody>
-                {order.map((prod) => {
-                  const qty = [order.product].length
+               
+                {order.map((prod,i) => {
+                  //const qty = [order.product].length
                  
                   console.log(prod)
-                  console.log(prod.product._id)
                   
-
                   return (
                     
-                    <tr>
-                      <td id= 'quantity'>{qty}</td>
+                    <tr key ={i}>
+                      <td id= 'quantity'>{prod.qty}</td>
                       <td id= 'products'>{prod.product.name}</td>
-                      <td id= 'total'>{(prod.product.price)*qty}</td>
-                      <td id= 'editDelete'><button onClick={()=>(prod.removeMenu)}>x</button></td>
-                      <td key ={prod.product._id}></td>
+                      <td id= 'total'>{(prod.product.price)}</td>
+                      <td id= 'editDelete'><button onClick={prod.onremoveMenu}>x</button></td>
+                      
                     </tr>   
-                )})}
+                  )})}
  
             </tbody>
           </table>

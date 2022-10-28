@@ -27,16 +27,35 @@ export default function Desayunos() {
   
 
   const addMenu = (product)=>{
-    // setOrder([...order].push(product)) asi no se debe hacer
-    //setOrder((order) =>  [...order].push({product})) este no funciono
-    setOrder((order) =>  [...order, {product}])
+
+    setOrder((oldOrder) => {
+     
+      // 1. identificar si el producto ya esta en la orden
+      let orderProduct
+
+      const found = oldOrder.find(element => element._id === product._id);
+  
+      if(found){
+        // si el producto ya esta 
+        // 1. guardo una referencia al producto encontrado en orderProduct
+        orderProduct = found
+        // 2. elimina el producto encontrado del oldOrder
+        // 3. le sumo uno a su attr qty
+        orderProduct.qty += 1
+      } else {
+        // si no esta
+        // uso el producto que viene por paramatro y lo guardo en orderProduct
+        orderProduct = product
+        // le agrego un attr qty = 1
+        orderProduct.qty = 1
+      }
+      // agrego orderProduct junto con oldOrder a lnuevio  estado final
+      return [...oldOrder, orderProduct]
+    })
     
   }
  
-   const removeMenu = ()=>{
-    
-   }
-
+  
  // useEffect(() => console.log(order), [order])
 
   return (
@@ -52,12 +71,13 @@ export default function Desayunos() {
                   product={prod}
                   key={index}
                   onAddMenu={() => addMenu(prod)}
-                  removeMenu={removeMenu}
+                  onremoveMenu={() => addMenu(prod)-1}
                 />
               );
             })}
           </div>
       </div>
+      
            <OrderSummary order={order}/>
     </>
   );

@@ -1,11 +1,10 @@
 import './styles/App.css';
 import {BrowserRouter,Route,Routes} from 'react-router-dom';
 import Login from './pages/Login';
-import Desayunos from './pages/Desayunos';
-import Especiales from './pages/Especiales';
-import Cocina from './pages/Cocina';
+import Menu from './pages/Menu';
+import Chef from './pages/Chef';
 import NotFoundPage from './components/NotFoundPage';
-import PerfilUsuario from './pages/PerfilUsuario';
+import ProfileUser from './pages/ProfileUser';
 
 // import Swal from 'sweetalert2';
 // import { useEffect } from 'react';
@@ -25,10 +24,9 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Login/>} />
-          <Route path='/desayunos' element={<Desayunos/>} />
-          <Route path='/especiales' element={<Especiales/>} />
-          <Route path='/perfil' element={<PerfilUsuario/>} />
-          <Route path='/cocina' element={<Cocina/>} />
+          <Route path='/menu' element={<Menu/>} />
+          <Route path='/profile' element={<ProfileUser/>} />
+          <Route path='/chef' element={<Chef/>} />
           <Route path='*' element={<NotFoundPage/>} />
         </Routes>
 

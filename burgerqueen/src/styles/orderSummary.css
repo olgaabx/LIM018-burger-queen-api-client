@@ -54,5 +54,12 @@ table{
     color: #FFFFFF; 
     height:5%;     
 }
+.editDelete{
+    width: 10px;
+}
+.delete{
+    width: 5%;
+    padding: 0%;
+}
 
 

@@ -6,7 +6,7 @@ import { getProducts } from "../helpers/api";
 import { useState, useEffect } from "react";
 import "../styles/showProducts.css";
 
-export default function Desayunos() {
+export default function Menu() {
 
   const [products, setProducts] = useState([]);
   const [order, setOrder] = useState([]);
@@ -38,20 +38,13 @@ export default function Desayunos() {
       console.log(oldOrder)
   
       if(orderProduct){
-        // si el producto ya esta 
-        // 1. guardo una referencia al producto encontrado en orderProduct
-       
-        // 2. elimina el producto encontrado del oldOrder
-        // 3. le sumo uno a su attr qty
+        
         orderProduct.qty += 1
       } else {
-        // si no esta
-        // uso el producto que viene por paramatro y lo guardo en orderProduct
-        //orderProduct = product
-        // le agrego un attr qty = 1
+        
         product.qty = 1
       }
-      // agrego orderProduct junto con oldOrder a lnuevio  estado final
+     
       return [...oldOrder, product]
     })
     

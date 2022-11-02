@@ -24,4 +24,12 @@ export const postOrder = (order,token) =>{
   });
   
 }
+export const getOrder = (order,token) =>{
+  return axios.get(`${BASE_URL}${orderPath}`,{order},{
+    headers: {
+      authorization: `Bearer ${token}`,
+    }
+  });
+  
+}
 
